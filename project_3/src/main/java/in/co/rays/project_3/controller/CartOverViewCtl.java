@@ -53,12 +53,8 @@ public class  CartOverViewCtl extends BaseCtl{
 			request.setAttribute("product", PropertyReader.getValue("error.require", "product"));
 			pass = false;		
 		}
-		/*
-			 * else if (!DataValidator.isFloat(request.getParameter("paymentterm"))) {
-			 * request.setAttribute("paymentterm", "Only numbers are allowed"); pass =
-			 * false; }
-			 */
-//		if (!OP_UPDATE.equalsIgnoreCase(request.getParameter("operation"))) {
+		
+		if (!OP_UPDATE.equalsIgnoreCase(request.getParameter("operation"))) {
 			
 			
 			if (DataValidator.isNull(request.getParameter("transactionDate"))) {
